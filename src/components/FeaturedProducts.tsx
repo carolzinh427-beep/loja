@@ -6,11 +6,13 @@ import type { Product } from '../data/storeData';
 interface FeaturedProductsProps {
   selectedCategory?: string;
   onClearCategoryFilter?: () => void;
+  onViewFullCatalog?: () => void;
 }
 
 export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
   selectedCategory,
-  onClearCategoryFilter,
+  onClearCategoryFilter: _onClearCategoryFilter,
+  onViewFullCatalog,
 }) => {
   const displayProducts = selectedCategory && selectedCategory !== 'inicio'
     ? FEATURED_PRODUCTS.filter((p) => p.category === selectedCategory)
@@ -37,8 +39,8 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
           </div>
 
           <button
-            onClick={onClearCategoryFilter}
-            className="text-[11px] sm:text-sm font-bold text-[#FFCC00] hover:text-[#E5B800] flex items-center gap-1 transition-colors tracking-wide"
+            onClick={onViewFullCatalog}
+            className="text-[11px] sm:text-sm font-bold text-[#FFCC00] hover:text-[#E5B800] flex items-center gap-1 transition-colors tracking-wide cursor-pointer"
           >
             <span>Ver todos</span>
             <ArrowRight className="w-3 h-3 stroke-[2.5]" />

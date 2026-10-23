@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search, X, ArrowRight, Phone } from 'lucide-react';
-import { FEATURED_PRODUCTS, WHATSAPP_NUMBER } from '../data/storeData';
+import { ALL_PRODUCTS, WHATSAPP_NUMBER } from '../data/storeData';
 import type { Product } from '../data/storeData';
 
 interface SearchModalProps {
@@ -14,8 +14,8 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
   if (!isOpen) return null;
 
   const results: Product[] = query.trim() === ''
-    ? FEATURED_PRODUCTS
-    : FEATURED_PRODUCTS.filter((p) =>
+    ? ALL_PRODUCTS
+    : ALL_PRODUCTS.filter((p) =>
         p.name.toLowerCase().includes(query.toLowerCase()) ||
         p.category.toLowerCase().includes(query.toLowerCase()) ||
         p.description.toLowerCase().includes(query.toLowerCase())
