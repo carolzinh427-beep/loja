@@ -7,7 +7,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
   return (
-    <section id="inicio" className="relative min-h-[92vh] flex items-center pt-24 pb-16 overflow-hidden bg-[#070A0F]">
+    <section id="inicio" className="relative min-h-[92vh] flex items-center pt-32 sm:pt-36 pb-16 overflow-hidden bg-[#070A0F]">
       {/* Background Image with professional low-key lighting */}
       <div className="absolute inset-0 z-0">
         <img

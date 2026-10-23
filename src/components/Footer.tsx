@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           
           {/* Brand Presentation Column */}
           <div className="lg:col-span-5 space-y-4">
-            <BifaoLogo variant="full" />
+            <BifaoLogo className="h-12 w-auto" />
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm mt-3">
               Casa das Bicicletas Bifão — Sua solução em Duas Rodas. Tradição, qualidade e variedade em bicicletas, motocicletas, e-bikes, peças originais e acessórios esportivos de alta proteção.
             </p>
