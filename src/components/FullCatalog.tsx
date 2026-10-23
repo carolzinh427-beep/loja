@@ -42,7 +42,7 @@ export const FullCatalog: React.FC<FullCatalogProps> = ({
   };
 
   return (
-    <section id="catalogo-completo" className="py-6 sm:py-10 bg-[#070A12] border-t border-b border-[#141C2E]">
+    <section id="catalogo-completo" className="py-10 sm:py-16 bg-[#070A12] border-t border-b border-[#141C2E]">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         
         {/* Top Header Bar */}
