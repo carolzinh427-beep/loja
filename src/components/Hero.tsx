@@ -28,11 +28,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           {/* Left Column: Headline, Subtitle, CTA */}
           <div className="lg:col-span-8 space-y-6">
             
-            {/* Brand Category Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-slate-900/90 border border-[#1B2436] text-xs font-semibold tracking-wider uppercase text-slate-300">
-              <span className="w-2 h-2 rounded-full bg-[#FFCC00] animate-pulse"></span>
-              <span>Casa das Bicicletas Bifão • Sua Solução em Duas Rodas</span>
-            </div>
 
             {/* Main Punchy Sports Headline */}
             <h1 className="font-display text-4xl sm:text-6xl md:text-7xl xl:text-8xl font-black italic tracking-tight text-white uppercase leading-[0.95]">

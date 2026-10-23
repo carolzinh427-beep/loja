@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BifaoLogo } from './BifaoLogo';
 import { Search, Phone, Menu, X, ArrowRight } from 'lucide-react';
-import { WHATSAPP_NUMBER, WHATSAPP_DISPLAY } from '../data/storeData';
+import { WHATSAPP_NUMBER } from '../data/storeData';
 
 interface HeaderProps {
   onSearchClick: () => void;
@@ -87,10 +87,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearchClick }) => {
               className="inline-flex items-center gap-2 bg-[#FFCC00] hover:bg-[#E5B800] text-black font-display font-extrabold text-sm sm:text-base px-3.5 sm:px-4 py-2 rounded-lg transition-all duration-200 shadow-md shadow-[#FFCC00]/10 tracking-wide uppercase"
             >
               <Phone className="w-4 h-4 fill-black" />
-              <span className="hidden sm:inline">WhatsApp</span>
-              <span className="text-xs opacity-90 hidden xl:inline font-mono font-bold">
-                {WHATSAPP_DISPLAY}
-              </span>
+              <span>WhatsApp</span>
             </a>
 
             {/* Mobile Menu Hamburger */}
@@ -144,7 +141,7 @@ export const Header: React.FC<HeaderProps> = ({ onSearchClick }) => {
               className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-[#FFCC00] text-black font-display font-extrabold text-sm uppercase rounded-lg"
             >
               <Phone className="w-4 h-4 fill-black" />
-              <span>Falar no WhatsApp: {WHATSAPP_DISPLAY}</span>
+              <span>Falar no WhatsApp</span>
             </a>
           </div>
         </div>

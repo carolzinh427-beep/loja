@@ -1,7 +1,7 @@
 import React from 'react';
 import { BifaoLogo } from './BifaoLogo';
 import { Phone, MapPin, Clock, ArrowRight } from 'lucide-react';
-import { WHATSAPP_NUMBER, WHATSAPP_DISPLAY } from '../data/storeData';
+import { WHATSAPP_NUMBER } from '../data/storeData';
 
 export const Footer: React.FC = () => {
   return (
@@ -100,8 +100,8 @@ export const Footer: React.FC = () => {
                   <span className="text-[10px] text-slate-400 block uppercase font-bold tracking-wide">
                     WhatsApp Direto
                   </span>
-                  <span className="text-white font-mono font-bold text-sm group-hover:text-[#FFCC00] transition-colors">
-                    {WHATSAPP_DISPLAY}
+                  <span className="text-white font-display font-bold text-sm uppercase tracking-wide group-hover:text-[#FFCC00] transition-colors">
+                    Fale com nossos consultores
                   </span>
                 </div>
               </a>
