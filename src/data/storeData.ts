@@ -27,7 +27,7 @@ export const CATEGORIES_DATA: Category[] = [
     title: 'Bicicletas',
     subtitle: 'MTB, Speed, Passeio e Urbana',
     count: 'Modelos selecionados',
-    imageUrl: 'https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/mockup-assets/cat-bicicletas.png',
     filterKey: 'bicicletas',
   },
   {
@@ -35,15 +35,15 @@ export const CATEGORIES_DATA: Category[] = [
     title: 'Motos',
     subtitle: 'Mobilidade, força e adrenalina',
     count: 'Linha completa',
-    imageUrl: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/mockup-assets/cat-motos.png',
     filterKey: 'motos',
   },
   {
     id: 'cat-eletricas',
-    title: 'Bicicletas Elétricas',
+    title: 'Elétricas',
     subtitle: 'Autonomia inteligente e tecnologia',
     count: 'E-Bikes de alta performance',
-    imageUrl: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/mockup-assets/cat-eletricas.png',
     filterKey: 'eletricas',
   },
   {
@@ -51,15 +51,15 @@ export const CATEGORIES_DATA: Category[] = [
     title: 'Capacetes',
     subtitle: 'Segurança e aerodinâmica esportiva',
     count: 'Certificação de segurança',
-    imageUrl: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/mockup-assets/cat-capacetes.png',
     filterKey: 'capacetes',
   },
   {
     id: 'cat-acessorios',
-    title: 'Acessórios & Peças',
+    title: 'Acessórios',
     subtitle: 'Pneus, componentes e ferramentas',
     count: 'Reposição e upgrade',
-    imageUrl: 'https://images.unsplash.com/photo-1511994298241-608e28f14fde?auto=format&fit=crop&w=800&q=80',
+    imageUrl: '/mockup-assets/cat-acessorios.png',
     filterKey: 'acessorios',
   },
 ];
@@ -72,7 +72,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     priceDemonstrative: 'R$ 6.999,00',
     badge: 'Alta Tecnologia',
     specs: ['Motor 350W Torque Alto', 'Bateria Lítio 13Ah', 'Autonomia até 55km'],
-    imageUrl: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '/mockup-assets/prod-ebike.png',
     description: 'Quadro em alumínio, pedal assistido e freios a disco.',
   },
   {
@@ -82,7 +82,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     priceDemonstrative: 'R$ 1.299,00',
     badge: 'Mais Vendida',
     specs: ['Câmbio 21 Velocidades', 'Suspensão Dianteira', 'Freio a Disco Mecânico'],
-    imageUrl: 'https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '/mockup-assets/prod-mtb.png',
     description: 'Geometria esportiva com excelente rolagem em qualquer terreno.',
   },
   {
@@ -92,7 +92,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     priceDemonstrative: 'R$ 14.990,00',
     badge: 'Economia & Força',
     specs: ['Motor 160cc Flex', 'Partida Elétrica', 'Excelente Autonomia'],
-    imageUrl: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '/mockup-assets/prod-cg160.png',
     description: 'A motocicleta mais confiável e econômica do Brasil.',
   },
   {
@@ -102,7 +102,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     priceDemonstrative: 'R$ 349,90',
     badge: 'Segurança',
     specs: ['Casco ABS Injetado', 'Viseira Cristal 2mm', 'Forro Confortável'],
-    imageUrl: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '/mockup-assets/prod-capacete.png',
     description: 'Proteção aerodinâmica e segurança certificada.',
   },
   {
@@ -112,7 +112,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     priceDemonstrative: 'R$ 89,90',
     badge: 'Alta Durabilidade',
     specs: ['Borracha de Alta Tração', 'Excelente Rolagem', 'Aro 29'],
-    imageUrl: 'https://images.unsplash.com/photo-1618762044398-ec1e7e048bbd?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '/mockup-assets/prod-pneu.png',
     description: 'Cravos direcionais para tração e durabilidade.',
   },
 ];
