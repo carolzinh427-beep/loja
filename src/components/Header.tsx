@@ -46,15 +46,15 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#070A12]/95 backdrop-blur-md border-b border-[#141C2E] shadow-xl">
       {/* Top Bar: Hamburger | Logo | Search + WhatsApp */}
-      <div className="max-w-7xl mx-auto px-4 py-2.5 sm:py-3 flex items-center justify-between gap-4">
+      <div className="max-w-xl mx-auto px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between gap-3">
         
         {/* Left: Hamburger Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(true)}
-          className="p-1.5 text-white hover:text-[#FFCC00] transition-colors focus:outline-none"
+          className="p-1 text-white hover:text-[#FFCC00] transition-colors focus:outline-none"
           aria-label="Abrir menu lateral"
         >
-          <Menu className="w-6 h-6 stroke-[2.2]" />
+          <Menu className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
         </button>
 
         {/* Center: Bifão Logo */}
@@ -67,18 +67,18 @@ export const Header: React.FC<HeaderProps> = ({
           className="flex items-center justify-center focus:outline-none"
           aria-label="Bifão Casa das Bicicletas - Início"
         >
-          <BifaoLogo className="h-8 sm:h-10" />
+          <BifaoLogo className="h-7 sm:h-9" />
         </a>
 
         {/* Right: Search + WhatsApp Green Pill */}
-        <div className="flex items-center gap-2.5 sm:gap-3.5">
+        <div className="flex items-center gap-2 sm:gap-3">
           {/* Search Icon */}
           <button
             onClick={onSearchClick}
-            className="p-1.5 text-white hover:text-[#FFCC00] transition-colors focus:outline-none"
+            className="p-1 text-white hover:text-[#FFCC00] transition-colors focus:outline-none"
             aria-label="Pesquisar catálogo"
           >
-            <Search className="w-5 h-5 stroke-[2.2]" />
+            <Search className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
           </button>
 
           {/* WhatsApp Icon (Green Circle with White Phone as in Mockup) */}
@@ -86,17 +86,17 @@ export const Header: React.FC<HeaderProps> = ({
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Vim pelo site da Casa das Bicicletas Bifão e gostaria de atendimento.')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#25D366] hover:bg-[#20BD5A] transition-all flex items-center justify-center shadow-md shadow-[#25D366]/25 hover:scale-105"
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#25D366] hover:bg-[#20BD5A] transition-all flex items-center justify-center shadow-md shadow-[#25D366]/25 hover:scale-105"
             aria-label="Falar conosco no WhatsApp"
           >
-            <Phone className="w-4 h-4 text-white fill-white stroke-[0]" />
+            <Phone className="w-3.5 h-3.5 text-white fill-white stroke-[0]" />
           </a>
         </div>
       </div>
 
       {/* Row 2: Sub-navigation Category Tabs Bar */}
       <div className="border-t border-[#141C2E] bg-[#05080E]/90 overflow-x-auto scrollbar-none">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between sm:justify-center gap-5 sm:gap-8 whitespace-nowrap min-w-max sm:min-w-0">
+        <div className="max-w-xl mx-auto px-3 sm:px-4 flex items-center justify-between gap-3 sm:gap-6 whitespace-nowrap min-w-max">
           {navTabs.map((tab) => {
             const isActive = activeTab === tab.id;
             return (

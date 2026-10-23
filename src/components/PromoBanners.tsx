@@ -1,91 +1,47 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import { WHATSAPP_NUMBER } from '../data/storeData';
 
 export const PromoBanners: React.FC = () => {
   return (
-    <section className="py-10 sm:py-16 bg-[#070A12]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+    <section className="py-3 sm:py-5 bg-[#070A12]">
+      <div className="max-w-xl mx-auto px-3 sm:px-4">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           
-          {/* Banner 1: BICICLETAS with High-Res Photography & Vector Typography */}
-          <div className="relative rounded-2xl overflow-hidden border border-[#141C2E] bg-[#0A1124] min-h-[220px] sm:min-h-[260px] flex flex-col justify-end p-6 sm:p-8 group shadow-2xl">
-            {/* High-Resolution HD Background Image */}
-            <div className="absolute inset-0 z-0">
-              <img
-                src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1200&q=85"
-                alt="Bicicletas Bifão"
-                className="w-full h-full object-cover object-center filter brightness-[0.45] contrast-[1.15] transition-transform duration-700 ease-out group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#070A12] via-[#0B152F]/75 to-transparent" />
-            </div>
+          {/* Banner 1: BICICLETAS matching mockup exactly */}
+          <a
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Vim pelo site da Casa das Bicicletas Bifão e gostaria de conhecer as Bicicletas em destaque.')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative rounded-xl overflow-hidden border border-[#141C2E] hover:border-[#FFCC00] bg-[#0A1124] shadow-md transition-all duration-200 block hover-lift"
+            title="Conhecer Bicicletas no WhatsApp"
+          >
+            <img
+              src="/mockup-assets/banner-bicicletas-hd.png"
+              alt="Bicicletas de todos os estilos - Casa das Bicicletas Bifão"
+              className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-103 select-none"
+              loading="lazy"
+            />
+          </a>
 
-            {/* Vector Typography & Button */}
-            <div className="relative z-10 flex items-end justify-between gap-4">
-              <div className="space-y-1.5">
-                <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black italic tracking-tight text-white uppercase leading-none drop-shadow">
-                  BICICLETAS<br />
-                  <span className="text-[#FFCC00]">DE TODOS OS ESTILOS</span>
-                </h3>
-                <p className="text-xs sm:text-sm md:text-base text-slate-200">
-                  Duas rodas, infinitas possibilidades.
-                </p>
-              </div>
-
-              {/* Vector Yellow Circular CTA Button */}
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Vim pelo site da Bifão e gostaria de ver os modelos de bicicletas.')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#FFCC00] hover:bg-[#E5B800] text-black flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110 shadow-xl shadow-[#FFCC00]/30"
-                aria-label="Ver bicicletas no WhatsApp"
-              >
-                <ArrowRight className="w-5 h-5 stroke-[3]" />
-              </a>
-            </div>
-          </div>
-
-          {/* Banner 2: MOTOS with High-Res Photography & Vector Typography */}
-          <div className="relative rounded-2xl overflow-hidden border border-[#141C2E] bg-[#1A0A0A] min-h-[220px] sm:min-h-[260px] flex flex-col justify-end p-6 sm:p-8 group shadow-2xl">
-            {/* High-Resolution HD Background Image */}
-            <div className="absolute inset-0 z-0">
-              <img
-                src="https://images.unsplash.com/photo-1558981408-db0ecd8a1ee4?auto=format&fit=crop&w=1200&q=85"
-                alt="Motocicletas Bifão"
-                className="w-full h-full object-cover object-center filter brightness-[0.45] contrast-[1.15] transition-transform duration-700 ease-out group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#070A12] via-[#2F0B0B]/75 to-transparent" />
-            </div>
-
-            {/* Vector Typography & Button */}
-            <div className="relative z-10 flex items-end justify-between gap-4">
-              <div className="space-y-1.5">
-                <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black italic tracking-tight text-white uppercase leading-none drop-shadow">
-                  MOTOS<br />
-                  <span className="text-[#DC2626]">PARA TODAS AS ROTAS</span>
-                </h3>
-                <p className="text-xs sm:text-sm md:text-base text-slate-200">
-                  Potência, segurança e liberdade.
-                </p>
-              </div>
-
-              {/* Vector Yellow Circular CTA Button */}
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Vim pelo site da Bifão e gostaria de ver os modelos de motos.')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#FFCC00] hover:bg-[#E5B800] text-black flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110 shadow-xl shadow-[#FFCC00]/30"
-                aria-label="Ver motos no WhatsApp"
-              >
-                <ArrowRight className="w-5 h-5 stroke-[3]" />
-              </a>
-            </div>
-          </div>
+          {/* Banner 2: MOTOS matching mockup exactly */}
+          <a
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Vim pelo site da Casa das Bicicletas Bifão e gostaria de conhecer as Motos em destaque.')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative rounded-xl overflow-hidden border border-[#141C2E] hover:border-[#FFCC00] bg-[#1A0A0A] shadow-md transition-all duration-200 block hover-lift"
+            title="Conhecer Motos no WhatsApp"
+          >
+            <img
+              src="/mockup-assets/banner-motos-hd.png"
+              alt="Motos para todas as rotas - Casa das Bicicletas Bifão"
+              className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-103 select-none"
+              loading="lazy"
+            />
+          </a>
 
         </div>
       </div>
     </section>
   );
 };
+
