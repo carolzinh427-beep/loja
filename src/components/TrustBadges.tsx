@@ -1,70 +1,58 @@
 import React from 'react';
-import { Award, Layers, Wrench, MessageSquare, ArrowUpRight } from 'lucide-react';
+import { Star, Bike, User, MessageCircle } from 'lucide-react';
 import { WHATSAPP_NUMBER } from '../data/storeData';
 
 export const TrustBadges: React.FC = () => {
   const items = [
     {
-      icon: Award,
+      icon: Star,
       title: 'Tradição e experiência',
-      description: 'Anos de história e compromisso com ciclistas e motociclistas de toda a região.',
     },
     {
-      icon: Layers,
+      icon: Bike,
       title: 'Variedade de produtos',
-      description: 'Bicicletas convencionais e elétricas, motos, peças originais e linha de proteção.',
     },
     {
-      icon: Wrench,
+      icon: User,
       title: 'Atendimento especializado',
-      description: 'Consultores com experiência técnica para orientar a melhor escolha para o seu perfil.',
     },
     {
-      icon: MessageSquare,
+      icon: MessageCircle,
       title: 'Fale com nossa equipe',
-      description: 'Canal ágil no WhatsApp para tirar dúvidas, cotações e verificar disponibilidade.',
-      isAction: true,
+      href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Gostaria de falar com a equipe da Casa das Bicicletas Bifão.')}`,
     },
   ];
 
   return (
-    <section className="py-12 bg-[#05070B] border-t border-b border-[#1B2436]">
+    <section className="py-6 sm:py-8 bg-[#050810] border-t border-b border-[#141C2E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
           {items.map((item, index) => {
             const Icon = item.icon;
-            return (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-[#0E1420]/60 border border-[#1B2436] hover:border-[#FFCC00]/40 transition-all duration-200 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-12 h-12 rounded-lg bg-[#0B1B3D] border border-[#1D5FD3]/40 flex items-center justify-center text-[#FFCC00] mb-4">
-                    <Icon className="w-6 h-6 stroke-[1.8]" />
-                  </div>
-                  <h4 className="font-display text-lg font-bold text-white uppercase tracking-wide">
-                    {item.title}
-                  </h4>
-                  <p className="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-
-                {item.isAction && (
-                  <div className="mt-4 pt-3 border-t border-[#1B2436]">
-                    <a
-                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Gostaria de falar com a equipe da Bifão.')}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#FFCC00] hover:text-[#E5B800] uppercase tracking-wider"
-                    >
-                      <span>Iniciar conversa</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
-                )}
+            const content = (
+              <div className="flex flex-col items-center justify-center p-2 group cursor-pointer">
+                <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-[#FFCC00] stroke-[1.8] mb-2 transition-transform group-hover:scale-110" />
+                <span className="text-xs sm:text-sm font-semibold text-white tracking-tight leading-tight">
+                  {item.title}
+                </span>
               </div>
             );
+
+            if (item.href) {
+              return (
+                <a
+                  key={index}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="focus:outline-none"
+                >
+                  {content}
+                </a>
+              );
+            }
+
+            return <div key={index}>{content}</div>;
           })}
         </div>
       </div>
